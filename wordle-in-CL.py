@@ -12,12 +12,12 @@ def play():
     guess = input('\nguess a word: ')
     if guess == word:
         win()
+    if len(guess) < 5 or len(guess) > 5:
+            print('five letters please')
+            play()    
     guessletlist = [guess[0], guess[1], guess[2], guess[3], guess[4], ]
     guesscompare = guess in words.list
-    if len(guess) < 5:
-            print('five letters please')
-            play()
-    elif guesscompare == False:
+    if guesscompare == False:
         print('that doesn\'t word actually')
         play()
     num=0
